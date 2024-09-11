@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:#40739e;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    background-color:white;
+    border-radius: 50%;
+    border: 7px double red;
+    position: relative;
+    
+   
+}
+.container::before{
+    content: 'Ajanta';
+    color: red;
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    font-size: 30px
+}
+.container::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border: 2px solid;
+
+}
+.number{
+    --rotate:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: orangered;
+    transform: rotate(var(--rotate));
+    
+}
+.number-1{--rotate:30deg;}
+.number-2{--rotate:60deg;}
+.number-3{--rotate:90deg;}
+.number-4{--rotate:120deg;}
+.number-5{--rotate:150deg;}
+.number-6{--rotate:180deg;}
+.number-7{--rotate:210deg;}
+.number-8{--rotate:240deg;}
+.number-9{--rotate:270deg;}
+.number-10{--rotate:300deg;}
+.number-11{--rotate:330deg;}
+
+.needle{
+    --rotation:0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%)  rotate(calc(var(--rotation)*1deg));
+    z-index: 7;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+   
+}
+.sec{
+    background-color: red;
+    width: 3px;
+    height: 43%;
+    
+}
+.min{
+    background-color: black;
+    width: 5px;
+    height: 35%;
+}
+
+.hrs{
+    background-color: black;
+    width: 8px;
+    height: 22%;
+}
